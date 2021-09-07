@@ -37,6 +37,9 @@
     "eslint-plugin-react": "^7.25.1",
     "prettier": "2.3.2",
     "react-scripts": "4.0.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0",
     "typescript": "^4.0.3"
   },
   "scripts": {
@@ -45,8 +48,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint:fix": "eslint './src/**/*.{js,ts,tsx,jsx}' --fix",
-    "lint:fix:strict": "npm run lint:fix --max-warnings=0",
-    "pretty:fix": "yarn prettier --write './src/**/*.{js,ts,tsx,jsx}'"
+    "lint:fix:strict": "eslint './src/**/*.{js,ts,tsx,jsx}' --max-warnings=0",
+    "pretty:fix": "yarn prettier --write './src/**/*.{js,ts,tsx,jsx}'",
+    "stylelint:fix": "stylelint './src/**/*.{css,scss}' --fix"
   },
   "eslintConfig": {
     "extends": [
