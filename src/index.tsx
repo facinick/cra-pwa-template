@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.scss';
 import App from './components/App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { configure } from 'mobx';
+import { RootStoreProvider } from './stores/provider';
+import { hyderationData } from './stores/hyderation_data';
+configure({ useProxies: 'never' });
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <RootStoreProvider hydrationData={hyderationData}>
+            <App />
+        </RootStoreProvider>
     </React.StrictMode>,
     document.getElementById('root'),
 );

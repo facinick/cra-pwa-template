@@ -16,5 +16,6 @@ module.exports = {
     rules: {
         'require-jsdoc': 'off',
         'json/*': ['error', 'allowComments'],
+        'react/react-in-jsx-scope': 'off',
     },
 };

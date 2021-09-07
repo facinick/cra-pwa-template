@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "node-sass": "^6.0.1",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/roboto": "^4.5.0",
+    "@mui/icons-material": "^5.0.0-rc.0",
+    "@mui/material": "^5.0.0-rc.0",
+    "mobx": "^6.3.3",
+    "mobx-react": "^7.2.0",
+    "node-sass": "^4.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "web-vitals": "^0.2.4",
@@ -78,7 +85,7 @@
   "lint-staged": {
     "*.{js,ts,jsx,tsx,json}": [
       "eslint --fix",
-      "bash -c tsc --noEmit" 
+      "bash -c tsc --noEmit"
     ],
     "*.{css,scss}": [
       "stylelint --fix"

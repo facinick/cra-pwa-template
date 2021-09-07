@@ -1,21 +1,25 @@
 import React from 'react';
 import '../styles/App.scss';
-import logo from '../assets/logo.svg';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import { observer } from 'mobx-react-lite';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { useThemeStore } from '../stores/provider';
+import { HelloWorld } from './HelloWorld';
 
-function App() {
+const App = observer(function App() {
+    const { theme } = useThemeStore();
+
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
-            </header>
-        </div>
+        <ThemeProvider theme={theme}>
+            <div className="App">
+                <CssBaseline />
+                <HelloWorld />
+            </div>
+        </ThemeProvider>
     );
-}
+});
 
 export default App;

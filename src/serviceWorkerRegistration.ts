@@ -26,7 +26,7 @@ type Config = {
 export function register(config?: Config) {
     if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
         // The URL constructor is available in all browsers that support SW.
-        if(process?.env?.PUBLIC_URL) {
+        if (process?.env?.PUBLIC_URL) {
             const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
             if (publicUrl.origin !== window.location.origin) {
                 // Our service worker won't work if PUBLIC_URL is on a different origin
@@ -34,14 +34,14 @@ export function register(config?: Config) {
                 // serve assets; see https://github.com/facebook/create-react-app/issues/2374
                 return;
             }
-    
+
             window.addEventListener('load', () => {
                 const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
-    
+
                 if (isLocalhost) {
                     // This is running on localhost. Let's check if a service worker still exists or not.
                     checkValidServiceWorker(swUrl, config);
-    
+
                     // Add some additional logging to localhost, pointing developers to the
                     // service worker/PWA documentation.
                     navigator.serviceWorker.ready.then(() => {
