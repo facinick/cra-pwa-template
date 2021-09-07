@@ -77,7 +77,8 @@
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx,json}": [
-      "eslint --fix"
+      "eslint --fix",
+      "bash -c tsc --noEmit" 
     ],
     "*.{css,scss}": [
       "stylelint --fix"
