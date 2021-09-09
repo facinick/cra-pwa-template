@@ -1,7 +1,8 @@
 {
     "name": "cra-pwa-template",
     "version": "0.1.0",
-    "private": true,
+    "private": false,
+    "homepage": "https://username.github.io/project",
     "keywords": [
         "PWA",
         "CRA",
@@ -11,7 +12,8 @@
         "Scss",
         "Eslint",
         "Prettier",
-        "StyleLint"
+        "StyleLint",
+        "github pages"
     ],
     "dependencies": {
         "@emotion/react": "^11.4.1",
@@ -19,6 +21,7 @@
         "@fontsource/roboto": "^4.5.0",
         "@mui/icons-material": "^5.0.0-rc.0",
         "@mui/material": "^5.0.0-rc.0",
+        "gh-pages": "^3.2.3",
         "mobx": "^6.3.3",
         "mobx-react": "^7.2.0",
         "node-sass": "^4.14.1",
@@ -70,7 +73,9 @@
         "eject": "react-scripts eject",
         "lint:fix": "eslint *.{js,ts,jsx,tsx,json} --fix --no-error-on-unmatched-pattern",
         "stylelint:fix": "stylelint src/**/*.{css,scss} --fix",
-        "pretty": "prettier --write ."
+        "pretty": "prettier --write .",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
